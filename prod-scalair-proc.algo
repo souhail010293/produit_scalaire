@@ -1,0 +1,22 @@
+PROCEDURE dot_product(VAR v2,v1:TABLE OF INTEGER;ps :INTEGER)
+VAR
+i,n:INTEGER;
+BEGIN
+   ps := 0;
+
+FOR i FROM 0 TO n STEP 1  DO
+    ps:=ps+v1[i]*v2[i];
+END_FOR
+write(ps);
+END
+ALGORITHM orthogonaux
+VAR
+    i,n:INTEGER;
+BEGIN
+FOR i FROM 0 TO n STEP 1  DO
+IF  (dot_product(v1[i],v2[i],ps[i])=0) THEN
+  write ("les deux vecteurx sont orthogonaux");
+END_IF
+
+
+END
